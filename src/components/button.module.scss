@@ -26,6 +26,7 @@
 
   background: $color-secondary;
   color: $color-dark;
+  box-sizing: border-box;
 
   &:active {
     box-shadow: none;

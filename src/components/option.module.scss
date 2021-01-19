@@ -3,6 +3,7 @@
 .root {
   display: flex;
   font: $font;
+  box-sizing: border-box;
 }
 
 .content {
