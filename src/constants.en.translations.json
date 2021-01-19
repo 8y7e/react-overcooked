@@ -1,0 +1,10 @@
+{
+  "essential": {
+    "title": "Essential cookies",
+    "description": "We use essential cookies to perform essential website functions, e.g. they're used to log you in. These are always active."
+  },
+  "analytics": {
+    "title": "Analytics cookies",
+    "description": "We use analytics cookies to understand how you use our websites so we can make them better, e.g. they're used to gather information about the pages you visit and how many clicks you need to accomplish a task."
+  }
+}

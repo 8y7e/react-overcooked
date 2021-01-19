@@ -1,0 +1,62 @@
+@import "../config";
+
+.root {
+  min-width: 80px;
+  height: 30px;
+
+  padding: 0 20px;
+  display: inline-block;
+
+  font: $font;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
+
+  user-select: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  pointer-events: auto;
+
+  background: $color-secondary;
+  color: $color-dark;
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &:hover {
+    background: lighten($color-secondary, 2);
+  }
+
+  &:active {
+    background: darken($color-secondary, 2);
+  }
+
+  @at-root a#{&} {
+    color: $color-dark;
+  }
+}
+
+.primary {
+  background: $color-primary;
+  color: #fff;
+
+  @at-root a#{&} {
+    color: #fff;
+  }
+
+  &:hover {
+    background: lighten($color-primary, 10);
+  }
+
+  &:active {
+    background: darken($color-primary, 20);
+  }
+}
