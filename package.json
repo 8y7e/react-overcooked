@@ -6,7 +6,7 @@
   "readmeFilename": "README.md",
   "repository": "derKode/react-overcooked",
   "bugs": "https://github.com/derKode/react-overcooked/issues",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "react",
     "cookie",
@@ -15,7 +15,8 @@
     "notice"
   ],
   "files": [
-    "lib/"
+    "lib/",
+    "styles.css"
   ],
   "module": "lib/index.esm.js",
   "main": "lib/index.js",

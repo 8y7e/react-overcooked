@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import cx from 'clsx';
 
 import Panel from './components/panel';
 
@@ -7,11 +8,11 @@ import { OPTION_ESSENTIAL, OPTION_ANALYTICS } from './constants';
 import lang from './index.en.translations';
 
 import { STORAGE_KEY, readValue, storeValue, removeValue } from './utils';
-
+import styles from './index.module.scss';
 
 const defaultOptions = [OPTION_ESSENTIAL, OPTION_ANALYTICS];
 
-const Overcooked = ({ options, translations, children, onSelect, persist, ...props }) => {
+const Overcooked = ({ className, options, translations, children, onSelect, persist }) => {
   const [isVisible, setVisible] = useState(!persist);
 
   useEffect(() => {
@@ -30,13 +31,14 @@ const Overcooked = ({ options, translations, children, onSelect, persist, ...pro
   if (!isVisible) return null;
 
   return (
-    <Panel
-      {...props}
-      {...{ options, translations }}
-      onSelect={handleSelect}
-    >
-      {children}
-    </Panel>
+    <div className={cx(className, styles.root)}>
+      <Panel
+        {...{ options, translations }}
+        onSelect={handleSelect}
+      >
+        {children}
+      </Panel>
+    </div>
   );
 };
 
@@ -47,6 +49,7 @@ Overcooked.defaultProps = {
 };
 
 Overcooked.propTypes = {
+  className: PropTypes.string,
   options: PropTypes.array,
 
   translations: PropTypes.shape({
